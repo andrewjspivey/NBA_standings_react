@@ -50,7 +50,7 @@ const TeamStandings = () => {
     const western = [];
     const eastern = [];
     const request = await axios.get(
-      `https://api.sportsdata.io/v3/nba/scores/json/Standings/%7B2022%7D?key=c6dabad397854c689c2b63f8eddfcb31`
+      `https://api.sportsdata.io/v3/nba/scores/json/Standings/%7B2022%7D?key=${process.env.REACT_APP_NBA_API_KEY}`
     );
     request.data.map((team) => {
       if (team.Conference === "Western") {
